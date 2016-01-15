@@ -11,7 +11,7 @@
         
     .NOTES
         AUTHOR: Aleksandar Dordevic, @Alex_ZZ_, Srdjan Bozovic
-        LASTEDIT: Novanuary 15, 2016
+        LASTEDIT: January 15, 2016
 #>
 
 workflow docker-geekquiz-acs
