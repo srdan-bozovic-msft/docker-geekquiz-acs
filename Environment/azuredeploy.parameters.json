@@ -1,0 +1,57 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters":{
+  "newStorageAccountNamePrefix": {
+    "value": "youracsxstorage1"
+  },
+  "adminUsername": {
+    "value": "acs"
+  },
+  "adminPassword": {
+    "value": "ACSadmin!"
+  },
+  "dnsNameForContainerServicePublicIP": {
+    "value": "xyz-acs-cluster-xplat-xyz"
+  },
+  "dnsNameForJumpboxPublicIP": {
+    "value": "xyz-acs-jumpbox-xplat-xyz"
+  },
+  "agentCount": {
+    "value": 3
+  },
+  "masterCount": {
+    "value": 3
+  },
+  "jumpboxConfiguration": {
+    "value": "windows"
+  },
+  "masterConfiguration": {
+    "value": "masters-are-agents"
+  },
+  "agentVMSize" : {
+    "value": "Standard_A1"
+  },
+  "masterVMSize" : {
+    "value": "Standard_D1"
+  },
+  "jumpboxVMSize": {
+    "value": "Standard_D2"
+  },
+  "clusterPrefix": {
+    "value": "c1"
+  },
+  "swarmEnabled": {
+    "value": "true"
+  },
+  "marathonEnabled": {
+    "value": "true"
+  },
+  "chronosEnabled": {
+    "value": "true"
+  },
+  "sshRSAPublicKey": {
+    "value": "disabled"
+            }
+    }
+}
