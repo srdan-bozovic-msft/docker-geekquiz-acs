@@ -1,0 +1,53 @@
+{
+	"id": "geekquiz",
+		"apps": [{
+			"id": "web",
+			"dependencies": ["../db"],
+			"instances": 2,
+			"cpus": 0.2,
+			"mem": 256,
+			"container": {
+				"type": "DOCKER",
+				"docker": {
+					"image": "sbozovic/docker-geekquiz-cl",
+					"network": "BRIDGE",
+					"portMappings": [{
+						"hostPort": 0,
+						"containerPort": 80
+					}],
+				"forcePullImage": true
+				}
+			},
+			"env": {
+				"DB_ENV_MYSQL_ROOT_PASSWORD": "Beograd011",
+				"DB_ENV_MYSQL_DATABASE": "geekquizmvcmysql4",
+				"DB_ENV_MYSQL_USER": "boss",
+				"DB_ENV_MYSQL_PASSWORD": "Beograd011"
+			}
+		}, {
+			"id": "db",
+			"instances": 1,
+			"cpus": 0.3,
+			"mem": 256,
+			"disk":256,
+			"container": {
+				"type": "DOCKER",
+				"docker": {
+					"image": "mysql:5.5",
+					"network": "BRIDGE",
+					"portMappings": [{
+						"hostPort": 0,
+						"containerPort": 3306,
+						"servicePort": 3306
+					}],
+				"forcePullImage": true
+				}
+			},
+			"env": {
+				"MYSQL_ROOT_PASSWORD": "Beograd011",
+				"MYSQL_DATABASE": "geekquizmvcmysql4",
+				"MYSQL_USER": "boss",
+				"MYSQL_PASSWORD": "Beograd011"
+			}
+	}]
+}
