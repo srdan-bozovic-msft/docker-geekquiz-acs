@@ -20,7 +20,7 @@ workflow docker-geekquiz-acs
 {
 
  #Getting json template for ACS
- $template = (Invoke-WebRequest https://raw.githubusercontent.com/srdjan-bozovic/docker-geekquiz-acs/master/marathon-scripts/geekquiz.json).Content
+ $template = (Invoke-WebRequest https://raw.githubusercontent.com/srdjan-bozovic/docker-geekquiz-acs/master/marathon-scripts/geekquiz.json -UseBasicParsing).Content
 
  #In case there is no previous installation
  try
