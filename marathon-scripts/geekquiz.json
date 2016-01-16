@@ -16,17 +16,9 @@
 						"containerPort": 80,
 						"servicePort": 10001
 					}],
-				"forcePullImage": true,
-				"parameters": [{"key":"volume","value":"/mnt/geekquizmysql:/var/lib/mysql"}]
+				"forcePullImage": true
 				}
 			},
-			"volumes": [
-				{
-				"containerPath": "/var/lib/mysql",
-			        "hostPath": "/mnt/geekquizmysql",
-			        "mode": "RW"
-			        }
-			],
 			"env": {
 				"DB_ENV_MYSQL_ROOT_PASSWORD": "{{password}}",
 				"DB_ENV_MYSQL_DATABASE": "geekquizmvcmysql4",
@@ -49,9 +41,17 @@
 						"containerPort": 3306,
 						"servicePort": 3306
 					}],
-				"forcePullImage": true
+				"forcePullImage": true,
+				"parameters": [{"key":"volume","value":"/mnt/geekquizmysql:/var/lib/mysql"}]
 				}
 			},
+			"volumes": [
+				{
+				"containerPath": "/var/lib/mysql",
+			        "hostPath": "/mnt/geekquizmysql",
+			        "mode": "RW"
+			        }
+			],
 			"env": {
 				"MYSQL_ROOT_PASSWORD": "{{password}}",
 				"MYSQL_DATABASE": "geekquizmvcmysql4",
