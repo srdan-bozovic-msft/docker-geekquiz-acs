@@ -20,10 +20,10 @@
 				}
 			},
 			"env": {
-				"DB_ENV_MYSQL_ROOT_PASSWORD": "Beograd011",
+				"DB_ENV_MYSQL_ROOT_PASSWORD": "{{password}}",
 				"DB_ENV_MYSQL_DATABASE": "geekquizmvcmysql4",
 				"DB_ENV_MYSQL_USER": "boss",
-				"DB_ENV_MYSQL_PASSWORD": "Beograd011"
+				"DB_ENV_MYSQL_PASSWORD": "{{password}}"
 			}
 		}, {
 			"id": "db",
@@ -45,10 +45,10 @@
 				}
 			},
 			"env": {
-				"MYSQL_ROOT_PASSWORD": "Beograd011",
+				"MYSQL_ROOT_PASSWORD": "{{password}}",
 				"MYSQL_DATABASE": "geekquizmvcmysql4",
 				"MYSQL_USER": "boss",
-				"MYSQL_PASSWORD": "Beograd011"
+				"MYSQL_PASSWORD": "{{password}}"
 			}
 	}]
 }
