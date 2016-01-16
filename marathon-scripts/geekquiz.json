@@ -16,9 +16,17 @@
 						"containerPort": 80,
 						"servicePort": 10001
 					}],
-				"forcePullImage": true
+				"forcePullImage": true,
+				"parameters": [{"key":"volume","value":"/mnt/geekquizmysql:/var/lib/mysql"}]
 				}
 			},
+			"volumes": [
+				{
+				"containerPath": "/var/lib/mysql",
+			        "hostPath": "/mnt/geekquizmysql",
+			        "mode": "RW"
+			        }
+			],
 			"env": {
 				"DB_ENV_MYSQL_ROOT_PASSWORD": "{{password}}",
 				"DB_ENV_MYSQL_DATABASE": "geekquizmvcmysql4",
