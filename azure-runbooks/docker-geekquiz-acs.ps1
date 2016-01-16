@@ -22,7 +22,7 @@ workflow docker-geekquiz-acs
  $template = (Invoke-WebRequest https://raw.githubusercontent.com/srdjan-bozovic/docker-geekquiz-acs/master/marathon-scripts/geekquiz.json -UseBasicParsing).Content.ToString()
  
  #Setting password
- Write-Output 'Getting json template for ACS' 
+ Write-Output 'Setting password' 
  $pwd = Get-AutomationVariable -Name 'mysqlpassword'
  $template = $template -replace '{{password}}', $pwd
  
