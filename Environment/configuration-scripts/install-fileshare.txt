@@ -1,0 +1,8 @@
+mkdir /mnt/geekquizmysql
+mount -t cifs //dockergeekquizacs.file.core.windows.net/mysql /mnt/geekquizmysql -o vers=3.0,username=dockergeekquizacs,password=9MbrPCmPLf...c91qGcHknA==,dir_mode=0777,file_mode=0777
+df -h /mnt/geekquizmysql
+
+append to /etc/fstab
+# MOUNT AZURE FILE SERVICE
+//dockergeekquizacs.file.core.windows.net/mysql /mnt/geekquizmysql cifs vers=3.0,username=dockergeekquizacs,password=9MbrPCmPLf...c91qGcHknA==,dir_mode=0777,file_mode=0777
+

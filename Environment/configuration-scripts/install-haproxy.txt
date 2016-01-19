@@ -1,0 +1,5 @@
+apt-get install haproxy
+wget --output-document=/bin/haproxy-marathon-bridge https://raw.githubusercontent.com/mesosphere/marathon/master/bin/haproxy-marathon-bridge
+/bin/haproxy-marathon-bridge install_haproxy_system localhost:8080
+
+
